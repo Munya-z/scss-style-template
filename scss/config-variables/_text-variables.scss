@@ -1,0 +1,32 @@
+//for text decoration 
+$text-decoration-line-vars:(
+    ol:overline,
+    ul:underline,
+    lt:line-through,
+    olul: overline underline
+);
+
+
+$text-decoration-styles:(
+    s : solid,
+    dt : dotted,
+    dsh : dashed,
+    db: double,
+    wv: wavy,
+);
+
+$text-dec-sizes:(
+    auto:auto,
+    1 : 1px,
+    2 : 2px,
+    3 : 3px,
+    4 : 4px,
+    5 : 5px
+);
+
+// for text overflow
+$text-overflow-variables:(
+    clip:clip,
+    ell: ellipsis,
+    ovflow: visible
+);

@@ -1,0 +1,62 @@
+@import "../config-variables/text-variables";
+@import "../config-variables/color-variables";
+.t-center{
+    text-align: center;
+}
+.t-left{
+    text-align: left;
+}
+.t-right{
+    text-align: right;
+}
+
+
+// for text overflow
+
+@each $name, $text-overflow-variable in $text-overflow-variables{
+    .t-#{$name}{
+        text-overflow: $text-overflow-variable;
+    }
+}
+
+//for text decoration 
+
+.t-dec-0{
+    text-decoration: none;
+}
+
+
+@each $line-name, $text-decoration-line-var in $text-decoration-line-vars{
+    .t-#{$line-name}{
+        text-decoration-line: $text-decoration-line-var;
+    }
+}
+
+@each $style-name, $text-decoration-style-var in $text-decoration-styles{
+    .t-#{$style-name}{
+        text-decoration-style: $text-decoration-style-var;
+    }
+}
+
+@each $line-name, $text-decoration-line-var in $text-decoration-line-vars{
+    @each $style-name, $text-decoration-style-var in $text-decoration-styles{
+
+        .t-#{$line-name}-#{$style-name}{
+            text-decoration: $text-decoration-line-var $text-decoration-style-var ;
+        }
+
+        @each $color-name, $text-decoration-color-var in $colors{
+
+            .t-#{$line-name}-#{$style-name}-#{$color-name}{
+                text-decoration: $text-decoration-line-var $text-decoration-style-var $text-decoration-color-var;
+            }
+
+            @each $size-name, $text-decoration-size-var in $text-dec-sizes{
+            
+                .t-#{$line-name}-#{$style-name}-#{$color-name}-#{$size-name}{
+                    text-decoration: $text-decoration-line-var $text-decoration-style-var $text-decoration-color-var $text-decoration-size-var ;
+                }
+            }  
+        }    
+    }
+}

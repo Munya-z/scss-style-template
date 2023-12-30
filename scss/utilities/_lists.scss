@@ -1,0 +1,30 @@
+@import "../config-variables/list-variables";
+
+@each $style-type-name, $style-type in $list-style-types{
+    .l-#{$style-type-name}{
+        list-style-type:$style-type;
+        
+    }
+
+    .l-#{$style-type-name}-in{
+    list-style-position: $style-type inside;
+    };
+
+    .l-#{$style-type-name}-out{
+        list-style-position:$style-type outside;
+    };
+
+
+};
+
+.l-in{
+    list-style-position: inside;
+};
+.l-out{
+    list-style-position: outside;
+};
+
+.l-none{
+    list-style-type: none;
+}
+

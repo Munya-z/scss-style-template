@@ -1,0 +1,22 @@
+@import "../config-variables/font-variables";
+
+// font-size classes 
+@each $name, $size in $font-sizes{
+    .fs-#{$name}{
+        font-size:$size;
+    }
+};
+
+//font-familiy classes
+@each $name, $font-fam in $font-families{
+    .#{$name}{
+        font-family:$font-fam;
+    }
+};
+
+//font-weight classes
+@each $weight, $font-weight in $font-weights{
+    .fw-#{$weight}{
+        font-weight:$font-weight;
+    }
+};

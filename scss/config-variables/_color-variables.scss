@@ -1,0 +1,16 @@
+//this is the colors for your project 
+$colors:(
+    primary:hsl(226, 100%, 50%),
+    secondary:hsl(150, 100%, 50%),
+    link:rgb(195, 0, 255),
+    dark: rgb(19, 19, 19),
+    light:rgb(239, 239, 239)
+);
+
+// these are the shades break points which you can also change to suit your needs 
+$color-shades:(
+    80:80%,
+    60:60%,
+    40:40%,
+    20:20%
+);

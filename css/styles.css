@@ -1,0 +1,79 @@
+/* line 12, ../../Desktop/learn-SASS/scss/utilities/_fonts.scss */
+.fs-large {
+  font-size: 64px;
+}
+
+/* line 12, ../../Desktop/learn-SASS/scss/utilities/_fonts.scss */
+.fs-big {
+  font-size: 48px;
+}
+
+/* line 12, ../../Desktop/learn-SASS/scss/utilities/_fonts.scss */
+.fs-medium {
+  font-size: 32px;
+}
+
+/* line 12, ../../Desktop/learn-SASS/scss/utilities/_fonts.scss */
+.fs-small {
+  font-size: 24px;
+}
+
+/* line 12, ../../Desktop/learn-SASS/scss/utilities/_fonts.scss */
+.fs-xsmall {
+  font-size: 16px;
+}
+
+/* line 10, ../../Desktop/learn-SASS/scss/utilities/_colors.scss */
+.clr-main {
+  color: #69d47e;
+}
+
+/* line 10, ../../Desktop/learn-SASS/scss/utilities/_colors.scss */
+.clr-secondary {
+  color: grey;
+}
+
+/* line 10, ../../Desktop/learn-SASS/scss/utilities/_colors.scss */
+.clr-link {
+  color: lightblue;
+}
+
+/* line 10, ../../Desktop/learn-SASS/scss/utilities/_colors.scss */
+.clr-dark {
+  color: black;
+}
+
+/* line 6, ../../Desktop/learn-SASS/scss/styles.scss */
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 12, ../../Desktop/learn-SASS/scss/styles.scss */
+.container a {
+  text-decoration: none;
+}
+
+/* line 14, ../../Desktop/learn-SASS/scss/styles.scss */
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* line 27, ../../Desktop/learn-SASS/scss/styles.scss */
+.youtube {
+  color: red;
+}
+
+/* line 27, ../../Desktop/learn-SASS/scss/styles.scss */
+.articles {
+  color: green;
+}
+
+/* line 27, ../../Desktop/learn-SASS/scss/styles.scss */
+.community {
+  color: yellow;
+}
+
+/*# sourceMappingURL=styles.css.map */

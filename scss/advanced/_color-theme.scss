@@ -1,0 +1,29 @@
+@use 'sass:list';
+
+$clr-primary:rgb(149, 227, 165);
+$clr-secondary:invert(rgba($clr-primary,0.5));
+$clr-link:lightblue;
+$clr-dark: black;
+$clr-light: white;
+$clr-accent: rgb(0, 121, 130);
+
+$simple-gradient: $clr-primary, $clr-secondary;
+$complex-gradient:$clr-primary, $clr-secondary, $clr-accent;
+
+$scheme-default: $clr-primary, $clr-light;
+$scheme-secondary:$clr-dark, $clr-secondary;
+$scheme-accent-gradient: $clr-dark, $complex-gradient;
+
+@mixin color-scheme($links,$text, $bg){
+
+    //the if loop to check if the $bg variable has more colors in it it should add the $bg as a gradient 
+    @if length($bg) == 1 {
+        background-color: $bg;
+    }@else{
+        background-image: linear-gradient(to top left,$bg);
+    }   
+    
+    color: $text;
+    a{color:$links}
+}
+

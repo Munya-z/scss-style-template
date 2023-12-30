@@ -1,0 +1,95 @@
+@import "../config-variables/color-variables";
+@import "../config-variables/border-variables";
+
+@each $size, $border-size in $border-sizes {
+    .brd-#{$size}{    
+        border: $border-size solid currentColor ;
+    }    
+};
+
+@each $size, $border-size in $border-sizes {
+    @each $type, $border-type in $border-types {
+        .brd-#{$size}-#{$type}{
+            border: $border-size $border-type;
+        };
+    };
+};
+
+
+@each $size, $border-size in $border-sizes {
+    @each $type, $border-type in $border-types {
+        @each $color, $border-color in $colors {
+            .brd-#{$size}-#{$type}-#{$color}{
+                border: $border-size $border-type $border-color;
+            };
+            .brd-#{$size}-#{$type}-acc-#{$color}{
+                border: $border-size $border-type complement($border-color);
+            };
+// we can also control the lighten or darknes of the border 
+            @each $shade, $shade-amount  in $color-shades {
+                .brd-#{$size}-#{$type}-#{$color}-l#{$shade}{
+                    border-color: lighten($border-color, $shade-amount);
+                    border: $border-size $border-type lighten($border-color, $shade-amount);
+                };
+                .brd-#{$size}-#{$type}-#{$color}-d#{$shade}{
+                    border-color: darken($border-color, $shade-amount);
+                    border: $border-size $border-type darken($border-color, $shade-amount);
+                };
+                
+                @if $border-color != white {
+                    @if $border-color != black {
+                    
+                        .brd-#{$size}-#{$type}-acc-#{$color}-l#{$shade}{
+                        border-color: complement(lighten($border-color, $shade-amount));
+                        };
+                        
+                        .brd-#{$size}-#{$type}-acc-#{$color}-d#{$shade}{
+                        border-color: complement(darken($border-color, $shade-amount));
+                        }; 
+                    };
+                };
+            }; 
+        };
+    };
+};
+
+// this will change the border color on hover 
+@each $size, $border-size in $border-sizes {
+        @each $color, $border-color in $colors {
+            .hv-brd-#{$color}:hover,
+            .hv-brd-#{$color}:focus{
+                border-color: $border-color;
+            };
+            .hv-brd-acc-#{$color}:hover,
+            .hv-brd-acc-#{$color}:focus{
+                border-color: complement($border-color);
+            };
+            //we can also control the lightness or darkenness of the border
+            @each $shade, $shade-amount  in $color-shades {
+                .hv-brd-#{$color}-l#{$shade}:hover,
+                .hv-brd-#{$color}-l#{$shade}:focus{
+                    border-color: lighten($border-color, $shade-amount);
+                };
+                .hv-brd-#{$color}-d#{$shade}:hover,
+                .hv-brd-#{$color}-d#{$shade}:focus{
+                    border-color: darken($border-color, $shade-amount);
+                };
+                
+                @if $border-color != white {
+                    @if $border-color != black {
+                    
+                        .hv-brd-acc-#{$color}-l#{$shade}:hover,
+                        .hv-brd-acc-#{$color}-l#{$shade}:focus{
+                        border-color: complement(lighten($border-color, $shade-amount));
+                        };
+                        
+                        .hv-brd-acc-#{$color}-d#{$shade}:hover,
+                        .hv-brd-acc-#{$color}-d#{$shade}:focus{
+                        border-color: complement(darken($border-color, $shade-amount));
+                        }; 
+                    };
+                };
+            }; 
+        }; 
+};
+    

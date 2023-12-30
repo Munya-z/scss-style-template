@@ -1,0 +1,47 @@
+@import "../config-variables/flex-variables";
+
+.d-flex{
+    display: flex;
+};
+
+.flex-row-r{
+    flex-direction: row-reverse;
+}
+.flex-column-r{
+    flex-direction: column-reverse;
+    
+}
+.flex-row{
+    flex-direction: row;
+}
+.flex-column{
+    flex-direction: column;
+    
+}
+.content-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+@each $gap-name, $gap-size in  $flex-gaps{
+    .g-#{$gap-name}{
+        gap:$gap-size;
+    };
+};
+
+@each $alignment-name,$alignment-value in  $alignment-values{
+    .jus-#{$alignment-name}{
+        justify-content:$alignment-value;
+    };
+    .al-i-#{$alignment-name}{
+        align-items:$alignment-value;
+    };
+    .al-s-#{$alignment-name}{
+        align-self:$alignment-value;
+    };
+
+};

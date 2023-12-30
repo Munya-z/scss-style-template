@@ -1,0 +1,62 @@
+@import "../config-variables/margin-&-padding-variables";
+
+// for padding sizes 
+@each $size, $value in $sizes {
+    .p-#{$size}{
+        padding: $value;
+    }
+    .pt-#{$size}{
+        padding-top: $value;
+    }
+    .pb-#{$size}{
+        padding-bottom: $value;
+    }
+    .pl-#{$size}{
+        padding-left: $value;
+    }
+    .pr-#{$size}{
+        padding-right: $value;
+    }
+    .px-#{$size}{
+        padding-inline: $value;
+    }
+    .py-#{$size}{
+        padding-block: $value;
+    }
+}
+
+//for margin sizes 
+@each $size, $value in $sizes {
+    .m-#{$size}{
+        margin: $value;
+    }
+    .mt-#{$size}{
+        margin-top: $value;
+    }
+    .mb-#{$size}{
+        margin-bottom: $value;
+    }
+    .ml-#{$size}{
+        margin-left: $value;
+    }
+    .mr-#{$size}{
+        margin-right: $value;
+    }
+    .mx-#{$size}{
+        margin-inline: $value;
+    }
+    .my-#{$size}{
+        margin-block: $value;
+    }
+};
+
+
+.mx-auto{
+    margin-inline:auto;
+}
+.my-auto{
+    margin-block:auto;
+}
+.m-auto{
+    margin:auto;
+}

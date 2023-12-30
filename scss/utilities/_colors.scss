@@ -1,0 +1,149 @@
+@import '../config-variables/color-variables';
+
+@function accent-color($color-to-accent){
+    // the black and white colors don't have accents so if they are given as arguments the function will not return anything
+    @if $color-to-accent == white{
+        @return null;
+    } @else if $color-to-accent == black{ 
+        @return null;
+    }@else{
+        $new-color: complement($color-to-accent);
+        @return $new-color; 
+    }  
+};
+
+@function lighten-a-color($color-to-lighten,$lighten-amount){
+    @if $color-to-lighten == white{ 
+        @return null;
+    }@else{
+        $new-color: lighten($color-to-lighten,$lighten-amount);
+        @return $new-color; 
+    }      
+};
+@function darken-a-color($color-to-darken,$darken-amount){
+    @if $color-to-darken == black{ 
+        @return null;
+    }@else{
+        $new-color: darken($color-to-darken,$darken-amount);
+        @return $new-color;
+    } 
+};
+
+// a loop for creating lighter colors
+
+@each $amount, $value in $color-shades{
+    @each $name, $color in $colors{
+    //text color 
+    .clr-#{$name}-l#{$amount}{
+        color: lighten-a-color($color, $value);
+    }
+    //back-ground color
+    .bg-#{$name}-l#{$amount}{
+        background-color: lighten-a-color($color, $value);
+    }
+    //border-color
+    .brd-#{$name}-l#{$amount}{
+        border-color: lighten-a-color($color, $value);
+    }
+    //the accent color
+    .clr-acc-#{$name}-l#{$amount}{
+        color: accent-color(lighten-a-color($color, $value));
+    }
+    }
+};
+
+// a loop for creating darker colors
+
+@each $amount, $value in $color-shades{
+    @each $name, $color in $colors{
+    //text color 
+    .clr-#{$name}-d#{$amount}{
+        color: darken-a-color($color, $value);
+    }
+    //back-ground color
+    .bg-#{$name}-d#{$amount}{
+        background-color: darken-a-color($color, $value);
+    }
+    //border-color
+    .brd-#{$name}-d#{$amount}{
+        border-color: darken-a-color($color, $value);
+    }
+    //the accent color
+    .clr-acc-#{$name}-d#{$amount}{
+        color: accent-color(darken-a-color($color, $value));
+    }
+    }
+};
+
+
+@each $name, $color in $colors{
+    //text color 
+    .clr-#{$name}{
+        color:$color;
+    };
+    .hv-clr-#{$name}:hover{
+        color:$color;
+    };
+
+    //back-ground color
+    .bg-#{$name}{
+        background-color:$color;
+    };
+    .bg-acc-#{$name}{
+        background-color: accent-color($color);
+    };
+    .hv-bg-#{$name}:hover,
+    .hv-bg-#{$name}:focus{
+        background-color:$color;
+    };
+    .hv-bg-acc-#{$name}:hover
+    .hv-bg-acc-#{$name}:focus{
+        background-color: accent-color($color);
+    };
+    //border-color
+    .brd-#{$name}{
+        border-color:$color ;
+    };
+    //the accent color
+    .clr-acc-#{$name}{
+        color: accent-color($color);
+    };
+    //the accent color
+    .hv-clr-acc-#{$name}:hover{
+        color: accent-color($color);
+    };
+
+    @each $shade, $shade-amount  in $color-shades {
+        .hv-bg-#{$name}-l#{$shade}:hover{
+            background-color: lighten($color, $shade-amount);
+        };
+        .hv-bg-#{$name}-d#{$shade}:hover{
+            background-color: darken($color, $shade-amount);
+        };
+        
+        // to lighten colors on hover 
+
+                .hv-clr-acc-#{$name}-l#{$shade}:hover{
+                    border-color: lighten($color, $shade-amount);
+                };
+                .hv-clr-#{$name}-l#{$shade}:hover{
+                    border-color: lighten($color, $shade-amount);
+                };
+                .hv-brd-#{$name}-l#{$shade}:hover{
+                    border-color: lighten($color, $shade-amount);
+                };
+        // to get a darken color on hovwer 
+                .hv-clr-acc-#{$name}-d#{$shade}:hover{
+                    border-color: darken($color, $shade-amount);
+                };
+                .hv-clr-#{$name}-d#{$shade}:hover{
+                    border-color: darken($color, $shade-amount);
+                };
+                .hv-brd-#{$name}-d#{$shade}:hover{
+                    border-color: darken($color, $shade-amount);
+                };
+            };            
+
+}
+
+

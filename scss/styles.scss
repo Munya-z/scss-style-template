@@ -1,0 +1,22 @@
+@import "utilities/borders";
+@import "utilities/colors";
+@import "utilities/default";
+@import "utilities/display";
+@import "utilities/flex";
+@import "utilities/fonts";
+@import "utilities/grid";
+@import "utilities/heights-&-widths";
+@import "utilities/lists";
+@import "utilities/margin-&-padding";
+@import "utilities/media-queries";
+@import "utilities/positions";
+@import "utilities/text";
+@import "utilities/z-index";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+

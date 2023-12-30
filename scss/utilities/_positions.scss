@@ -1,0 +1,12 @@
+$positions:(
+    rel: relative,
+    abs: absolute,
+    fxd: fixed,
+    stk: sticky,
+);
+
+@each $position, $value in $positions {
+    .pos-#{$position}{
+        position: $value;
+    }
+};

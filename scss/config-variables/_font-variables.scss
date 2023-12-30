@@ -1,0 +1,34 @@
+//this is the font that is used to calculate the sizes of the other fonts sizes
+$base-font-size:16px;
+
+
+$font-sizes:(
+    large:$base-font-size * 4,
+    big:$base-font-size * 3,
+    medium:$base-font-size * 2,
+    small:$base-font-size * 1.5,
+    xsmall:$base-font-size * 1
+);
+
+
+
+//to change to font families of your project, change these variables here
+$main-font: "Times New Roman", Times, serif;
+$secondary-font:  Arial, Helvetica, sans-serif;
+$mono-space-font: "Lucida Console", "Courier New", monospace;
+
+$font-families: (
+    fm: $main-font,
+    fs:  $secondary-font,
+    fmsp: $mono-space-font
+);
+
+//sizes responsible for font weight
+$font-weights:(
+    100:100,
+    200:200,
+    300:300,
+    400:400,
+    500:500,
+    600:600,
+)

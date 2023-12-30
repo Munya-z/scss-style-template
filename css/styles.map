@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"../scss/styles.scss",
+		"../scss/utilities/_fonts.scss",
+		"../scss/utilities/_colors.scss"
+	],
+	"sourcesContent": [
+		"// @use 'scss:map';\r\n@import \"utilities/fonts\";\r\n@import \"utilities/colors\";\r\n\r\n\r\n.container{\r\n    width:100vw ;\r\n    display:flex;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n\r\n    a{\r\n    text-decoration: none;\r\n    &:hover{\r\n        text-decoration: underline;\r\n    }\r\n}\r\n}\r\n\r\n$colors:(\r\n    youtube: red,\r\n    articles: green,\r\n    community: yellow\r\n);\r\n//the loop will take the info befor the : as name and after the : as color\r\n@each $name, $color in $colors{\r\n    .#{$name}{\r\n        color:$color;\r\n    }\r\n}\r\n\r\n",
+		"$base-font-size:16px;\r\n\r\n$font-sizes:(\r\n    large:$base-font-size * 4,\r\n    big:$base-font-size * 3,\r\n    medium:$base-font-size * 2,\r\n    small:$base-font-size * 1.5,\r\n    xsmall:$base-font-size * 1\r\n);\r\n\r\n@each $name, $size in $font-sizes{\r\n    .fs-#{$name}{\r\n        font-size:$size;\r\n    }\r\n};",
+		"\r\n$colors:(\r\n    main:rgb(105, 212, 126),\r\n    secondary:grey,\r\n    link:lightblue,\r\n    dark: black\r\n);\r\n\r\n@each $name, $color in $colors{\r\n    .clr-#{$name}{\r\n        color:$color;\r\n    }\r\n};"
+	],
+	"names": [],
+	"mappings": ";ACWI,AAAA,SAAS,CAAG;EACR,SAAS,EATP,IAAmB;CAUxB;;;AAFD,AAAA,OAAO,CAAK;EACR,SAAS,EART,IAAmB;CAStB;;;AAFD,AAAA,UAAU,CAAE;EACR,SAAS,EAPN,IAAmB;CAQzB;;;AAFD,AAAA,SAAS,CAAG;EACR,SAAS,EANP,IAAqB;CAO1B;;;AAFD,AAAA,UAAU,CAAE;EACR,SAAS,EALN,IAAmB;CAMzB;;;ACJD,AAAA,SAAS,CAAI;EACT,KAAK,EARJ,OAAkB;CAStB;;;AAFD,AAAA,cAAc,CAAD;EACT,KAAK,EAPC,IAAI;CAQb;;;AAFD,AAAA,SAAS,CAAI;EACT,KAAK,EANJ,SAAS;CAOb;;;AAFD,AAAA,SAAS,CAAI;EACT,KAAK,EALH,KAAK;CAMV;;;AFNL,AAAA,UAAU,CAAA;EACN,KAAK,EAAC,KAAM;EACZ,OAAO,EAAC,IAAI;EACZ,eAAe,EAAE,MAAM;EACvB,cAAc,EAAE,MAAM;CAQzB;;;AAZD,AAMI,UANM,CAMN,CAAC,CAAA;EACD,eAAe,EAAE,IAAI;CAIxB;;;AAXD,AAQI,UARM,CAMN,CAAC,AAEA,MAAM,CAAA;EACH,eAAe,EAAE,SAAS;CAC7B;;;AAWD,AAAA,QAAQ,CAAC;EACL,KAAK,EAPA,GAAG;CAQX;;;AAFD,AAAA,SAAS,CAAA;EACL,KAAK,EANC,KAAK;CAOd;;;AAFD,AAAA,UAAU,CAAD;EACL,KAAK,EALE,MAAM;CAMhB"
+}

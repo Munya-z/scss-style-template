@@ -1,0 +1,43 @@
+@import "../config-variables/heights-&-widths-variables";
+
+
+@each $size, $value in $heights-and-widths {
+    .h-#{$size}{
+        height: $value;
+    }
+    .w-#{$size}{
+        width: $value;
+    }
+
+};
+
+// when you need the container to fill the entier screen 
+.fill-win{
+    width: 100vw;
+    height: 100vh;
+}
+
+// if the container is inside another container with the position set 
+.fill-space{
+    width: 100%;
+    height: 100%;
+}
+
+// if you only need to fill the width of the screen 
+.fill-win-w{
+    width: 100vw;
+}
+
+//for filling the width of the entire container if contained 
+.fill-w{
+    width: 100%;
+}
+
+//for filling the height of the entire screen if contained 
+.fill-win-h{
+    height: 100vh;
+}
+//for filling the height of the entire container if contained 
+.fill-h{
+    height: 100%;
+}

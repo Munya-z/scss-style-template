@@ -1,0 +1,22 @@
+@use 'sass:map';
+
+$amount-of-columns : 12;
+
+[class^=col-]{
+flex-basis: 100%;
+}
+
+@for $value from 1 through $amount-of-columns{
+    .col-#{$value}{
+        flex:0 0 (100%/($amount-of-columns / $value));
+    }
+
+    .col-offset-#{$value}{
+        margin-left:(100%/($amount-of-columns / $value));
+    }
+};
+
+
+
+
+

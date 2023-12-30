@@ -1,0 +1,10 @@
+$base-size:1em;
+$sizes:(
+    0:0,
+    1:$base-size ,
+    2:$base-size * 2 ,
+    3:$base-size * 3,
+    4:$base-size * 4,
+    5:$base-size * 5,
+    10:10%
+);
