@@ -22,8 +22,8 @@ Link to the css file on github or download it and link to it internally
 use the classes how you would use any normal class in your projects
 
 ```html
-<section class="">
-    <h1 class="">This is a heading</h1>
+<section class="bg-light mb-2 pb-4">
+    <h1 class="mx-auto t-center fs-medium my-2 clr-primary">This is a heading</h1>
     <p class="">this is a paragraph text</p>
 </section>
 ```
