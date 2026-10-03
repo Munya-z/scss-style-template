@@ -1,4 +1,4 @@
-#SCSS-style-template
+# SCSS-style-template
 
 ## CSS template for easy project round style manangemt
 
