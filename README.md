@@ -15,7 +15,7 @@ Link to the css file on github or download it and link to it internally
 
 ```html
 <head>
-  <style src="https://github.com/munya-z/scss-style-template/css">
+  <style src="https://github.com/munya-z/scss-style-template/css/styles.css">
 </head>
 ```
 
